@@ -31,7 +31,7 @@ def test():
     print('elapsed time:%.2fs'%(time()-t0))
     result=arcfour(b'key',cipher)
     assert result==clear,f'{result!r} != {clear!r}' % (result,clear)
-    print(f'elapsed time:{time()-t0:.2f}'%(time()-t0))
+    print(f'elapsed time:{time()-t0:.2f}s')
     print('OK')
 if __name__=='__main__':
     test()
