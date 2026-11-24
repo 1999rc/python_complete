@@ -1,8 +1,10 @@
-import sys 
-import time 
-from concurrent import futures 
-from random import randrange 
+import sys
+import time
+from concurrent import futures
+from random import randrange
+
 from arcfour import arcfour
+
 Jobs =12 
 Size=2**18 
 Key=b'Twas brilling,and the slithy toves\nDid gyre'
@@ -23,9 +25,11 @@ def main(workers=None):
         for i in range(Jobs,0,-1):
             size=Size+int(Size/Jobs * (i-Jobs/2))
             job=executor.submit(arcfour_test,size,Key)
+            to_do.append(job)
+
         for future in futures.as_completed(to_do):
             res=future.result()
-            print('{:.1f} KB'.format(res/2**10))
+            print(f'{res/2**10:.1f} KB')
     print(Status.format(actual_workers,time.time()-t0))
 if __name__=='__main__':
     if len(sys.argv)==2:
