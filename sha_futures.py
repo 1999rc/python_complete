@@ -1,8 +1,9 @@
-import sys 
-import time 
-import hashlib 
-from concurrent import futures 
-from random import randrange 
+import hashlib
+import sys
+import time
+from concurrent import futures
+from random import randrange
+
 Jobs=12 
 Size=2**20 
 Status='{} workers,elapsed time: {:.2f}s'
