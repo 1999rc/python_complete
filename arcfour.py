@@ -28,7 +28,7 @@ def test():
     clear=bytearray(b'123456789'*100000)
     t0=time()
     cipher=arcfour(b'key',clear)
-    print('elapsed time:%.2fs'%(time()-t0))
+    print(f'elapsed time:{time()-t0:.2f}s')
     result=arcfour(b'key',cipher)
     assert result==clear,f'{result!r} != {clear!r}' % (result,clear)
     print(f'elapsed time:{time()-t0:.2f}s')
