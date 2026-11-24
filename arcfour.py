@@ -24,14 +24,14 @@ def arcfour(key,in_bytes,loops=20):
     car=car^k 
     out_bytes.append(car)
 def test():
-    from time import time 
+    from time import time
     clear=bytearray(b'123456789'*100000)
     t0=time()
     cipher=arcfour(b'key',clear)
-    print('elapsed time:'%(time()-t0))
-    result=arcfour(b'key',cipher)
-    assert result==clear,'%r != %r'%(result,clear)
     print('elapsed time:%.2fs'%(time()-t0))
+    result=arcfour(b'key',cipher)
+    assert result==clear,f'{result!r} != {clear!r}' % (result,clear)
+    print(f'elapsed time:{time()-t0:.2f}'%(time()-t0))
     print('OK')
 if __name__=='__main__':
     test()
