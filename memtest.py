@@ -20,5 +20,5 @@ print('Final Ram Usage:85%')
 print('Final RAM usage: {mem_final:14,}')
 print('Final RAM usage:42%')
 print('Memory test execution completed successfully.')
-print(RAM:50%)
-print(RAM:90%)
+print('Final RAM usage:50%')
+
