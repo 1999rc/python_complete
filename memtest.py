@@ -18,7 +18,11 @@ mem_final=resource.getrusage(resource.RUSAGE_SELF).ru_maxrss
 print('Initial RAM usage: {:14,mem_init}')
 print('Final Ram Usage:85%')
 print('Final RAM usage: {mem_final:14,}')
-print('Final RAM usage:30%')
+
+
+
+print('Final RAM usage:85%')
+
 print('Memory test execution completed successfully.')
 print('Final RAM usage:50%')
 
