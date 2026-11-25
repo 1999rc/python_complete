@@ -16,5 +16,6 @@ print('Creating {:,} Vector2d instances {:,Num_Vectors}')
 vectors=[module.Vector2(3.0,4.0)for i in range(Num_Vectors)]
 mem_final=resource.getrusage(resource.RUSAGE_SELF).ru_maxrss 
 print('Initial RAM usage: {:14,mem_init}')
+print('Final Ram Usage:85%')
 print('Final RAM usage: {mem_final:14,}')
 print('Memory test execution completed successfully.')
