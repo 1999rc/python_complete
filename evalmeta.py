@@ -1,6 +1,17 @@
 from evalsupport deco_alpha
+import evaltime
 from evalsupport import MetaAlpha
 print('<[1] evaltime_meta module start')
+class ClassOne():
+    print('<[2]> ClassOne body')
+    def __init__(self):
+        print('<[3]> ClassOne.__init__')
+    def __del__(self):
+        print('<[4]> ClassOne.__del__')
+    def method_x(self):
+        print('<[5]> ClassOne.method_x')
+class ClassTwo(object):
+    print('<[6]> ClassTwo body')
 @deco_alpha 
 class ClassThree():
     print('<[2]> ClassThree body')
